@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Safety Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Safety Recommendations</h1>
+        <div class="alert">
+            <h3>Detected {{ disaster }} in {{ location }}</h3>
+            <ul>
+                {% for item in recommendations %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a href="/">Analyze Another Report</a>
+    </div>
+</body>
+</html>
